@@ -1,7 +1,6 @@
 const { Pool } = require('pg');
 const fs = require('fs');
 const jimp = require('jimp');
-const fetch = require('node-fetch');
 const {bounds} = require('@mapbox/geo-viewport');
 const pool = new Pool({host: "localhost", database: "elevations_detailed"});
 const guide = JSON.parse(fs.readFileSync("./sketches.json"));

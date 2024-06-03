@@ -9,6 +9,6 @@ if (process.env.NODE_ENV == 'production') {
 
 app.use(express.static('static'));
 
-app.listen(process.env.PORT || 5000, function () {
-  console.log('listening on port 5000');
+app.listen(process.env.PORT || 5001, function () {
+  console.log('listening on port 5001');
 });
