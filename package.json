@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "webpack --watch & node server.js",
-    "heroku-postbuild": "./node_modules/.bin/webpack --config webpack.config.js -p && node builders/upload-bundle.js",
+    "heroku-postbuild": "npx webpack build --config webpack.config.js",
     "minify": "node builders/minify-images.mjs",
     "sketches": "node builders/terrain-sketches.js"
   },
