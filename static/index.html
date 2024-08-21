@@ -10,11 +10,10 @@
   </head>
 
   <body class="site-body no-js">
-    <div class="sliding-site-section third" id="bio">
+    <div class="sliding-site-section second" id="bio">
       <div class="content-container wide">
         <div>
           <p class="text-block intro">
-            <a class="text-link" show="sketches" hide="bio">Chris Clark,</a><br />
             is a user interface designer and developer.
           </p>
           <p class="text-block intro">
@@ -66,7 +65,6 @@
     <div class="sliding-site-section first showing" id="sketches">
       <div class="content-container wide">
         <p class="text-block intro">
-          <a href="/" class="text-link">Chris Clark,</a><br />
           is a multidisciplinary user interface designer and developer.
         </p>
         <canvas id="canvas" class="canvas"></canvas>
@@ -118,44 +116,47 @@
       </div>
     </div>
 
-    <div class="toggle-buttons showing" id="toggle-buttons">
-      <div
-        class="toggle-button portfolio showing right"
-        show="portfolio"
-        hide="sketches"
-        shouldLoadImages="true"
-        id="portfolio-toggle-button"
-      >
-        <div class="toggle-button-text">Portfolio</div>
-      </div>
-      <div>•</div>
-      <div
-        class="toggle-button case-studies showing right"
-        id="case-studies-button"
-        menu="case-studies-menu"
-        style="padding-bottom: 0.5rem; margin-bottom: -0.5rem"
-      >
-        <div class="toggle-button-text">Case Studies</div>
-        <div class="toggle-button-sub-menu" id="case-studies-menu">
-          <div
-            class="toggle-button-sub-menu-item"
-            show="case-study-merge"
-            hide="sketches"
-          >
-            Trunk Merge Queue
-          </div>
-          <div class="toggle-button-sub-menu-item">Trunk Component Library</div>
-          <div class="toggle-button-sub-menu-item">Sprig Survey Creation</div>
-          <div class="toggle-button-sub-menu-item">Sentry APM</div>
+    <div class="header">
+      <a class="text-link logo" show="sketches" hide="bio,portfolio,case-study-merge">Chris Clark,</a><br />
+      <div class="toggle-buttons showing" id="toggle-buttons">
+        <div
+          class="toggle-button portfolio showing right"
+          show="portfolio"
+          hide="sketches,bio,case-study-merge"
+          shouldLoadImages="true"
+          id="portfolio-toggle-button"
+        >
+          <div class="toggle-button-text">Portfolio</div>
         </div>
-      </div>
-      <div>•</div>
-      <div
-        class="toggle-button read-more showing right"
-        show="bio"
-        hide="sketches"
-      >
-        <div class="toggle-button-text">About</div>
+        <div>•</div>
+        <div
+          class="toggle-button case-studies showing right"
+          id="case-studies-button"
+          menu="case-studies-menu"
+          style="padding-bottom: 0.5rem; margin-bottom: -0.5rem"
+        >
+          <div class="toggle-button-text">Case Studies</div>
+          <div class="toggle-button-sub-menu" id="case-studies-menu">
+            <div
+              class="toggle-button-sub-menu-item"
+              show="case-study-merge"
+              hide="sketches,bio,portfolio"
+            >
+              Trunk Merge Queue
+            </div>
+            <div class="toggle-button-sub-menu-item">Trunk Component Library</div>
+            <div class="toggle-button-sub-menu-item">Sprig Survey Creation</div>
+            <div class="toggle-button-sub-menu-item">Sentry APM</div>
+          </div>
+        </div>
+        <div>•</div>
+        <div
+          class="toggle-button read-more showing right"
+          show="bio"
+          hide="sketches,portfolio,case-study-merge"
+        >
+          <div class="toggle-button-text">About</div>
+        </div>
       </div>
     </div>
   </body>
