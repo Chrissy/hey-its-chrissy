@@ -139,6 +139,7 @@ body:not(.animating) .sliding-site-section:not(.showing) {
 
 .toggle-button-sub-menu {
   border: 1px solid rgb(0, 194, 243);
+  background-color: rgb(227, 247, 255);
   padding: 1rem;
   position: absolute;
   right: 0;
@@ -223,7 +224,7 @@ body .toggle-button.showing {
 
 .text-block.intro {
   font-size: 0.75em;
-  margin: 0 0 -2em 0;
+  margin: 0;
   width: 60%;
   max-width: 600px;
   z-index: 1;
