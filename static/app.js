@@ -76,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const canvas = document.getElementById("canvas");
   const control = document.getElementById("canvas-control")
   const toggleButtons = document.querySelectorAll('[show],[hide]');
+  const menus = document.querySelectorAll('[menu]');
   const sketchTitle = document.getElementById('sketch-title');
 
   let sketchStore = [getSketch(guide[0].name)];
@@ -92,6 +93,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
   if (toggleButtons) [...toggleButtons].forEach((toggleButton) => {
     toggleButton.addEventListener('click', () => handleToggleButtonClick(toggleButton));
+  });
+
+  if (menus) [...menus].forEach((menu) => {
+    const menuTarget = document.getElementById(menu.getAttribute("menu"));
+    console.log(menuTarget)
+    const menuActions = menuTarget.querySelectorAll('[show],[hide]');
+
+    menu.addEventListener('mouseenter', () => {
+      console.log("mouseenter")
+      menuTarget.classList.add('showing');
+    })
+    menu.addEventListener('mouseleave', () => {
+      menuTarget.classList.remove('showing');
+    })
+    menu.addEventListener('click', () => {
+      menuTarget.classList.remove('showing');
+    })
   });
 
   const mesh = initializeMesh(canvas);

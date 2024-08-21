@@ -119,17 +119,44 @@ body:not(.animating) .sliding-site-section:not(.showing) {
   cursor: pointer;
 }
 
-.toggle-button {
+.toggle-buttons {
   position: absolute;
   top: .75rem;
+  right: 0.75rem;
   cursor: pointer;
-  height: .75em;
-  width: 1.25em;
-  min-width: 3rem;
-  min-height: 1.5rem;
-  fill: rgb(0, 194, 243);
-  opacity: 0;
   transition: .5s opacity cubic-bezier(1, 0, 0, 1);
+  display: flex;
+  gap: 0.5rem;
+  color: rgb(0, 194, 243);
+  visibility: hidden;
+  font-size: .9rem;
+  align-items: center;
+}
+
+.toggle-buttons.showing {
+  visibility: visible;
+}
+
+.toggle-button-sub-menu {
+  border: 1px solid rgb(0, 194, 243);
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  top: calc(100%);
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  visibility: hidden;
+}
+
+.toggle-button-sub-menu.showing {
+  visibility: visible;
+}
+
+.toggle-button:hover, .toggle-button-text:hover {
+  color: rgb(66, 209, 245);
+  cursor: pointer;
 }
 
 .toggle-button svg {
@@ -148,31 +175,23 @@ body .toggle-button.showing {
   transform: translateY(0);
 }
 
-.toggle-button-text {
-  font-size: .9rem;
-  color: rgb(0, 194, 243);
-  line-height: 0;
-  text-align: center;
-  margin-top: .5em;
-}
-
-.toggle-button.portfolio, .toggle-button.back.right  {
+.toggle-button.portfolio  {
   right: .75rem;
 }
 
-.toggle-button.back.left {
-  left: .75rem;
-}
-
-.toggle-button.right .toggle-button-text {
-  margin-right: 1.1em;
+.toggle-button.back {
+  color: rgb(0, 194, 243);
+  position: absolute;
+  left: 0rem;
+  top: 0rem;
+  padding: 1rem;
 }
 
 .toggle-button.left .toggle-button-text {
-  margin-left: 0.8em;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
 }
-
-.no-js .toggle-button, .no-js .requires-js { display: none; }
 
 .big-image {
   width: 100%;
