@@ -26,6 +26,7 @@ body.animating {
   color: rgb(12, 75, 121);
   width: 100%;
   overflow-x: hidden;
+  background-color: #f0f0f0;
 }
 
 @media (max-width: 850px) {
@@ -49,7 +50,6 @@ body.animating {
 }
 
 .sliding-site-section {
-  background: rgb(227, 247, 255);
   height: 100vh;
   overflow: hidden;
 }
@@ -58,7 +58,6 @@ body.animating {
 
 .sliding-site-section:not(.showing) {
   transform: translateX(100vw);
-  background: rgb(240, 240, 240);
 }
 
 body.animating .sliding-site-section:not(.showing) {
@@ -140,7 +139,7 @@ body:not(.animating) .sliding-site-section:not(.showing) {
 
 .toggle-button-sub-menu {
   border: 1px solid rgb(0, 194, 243);
-  background-color: rgb(227, 247, 255);
+  background-color: #f0f0f0;
   padding: 1rem;
   position: absolute;
   right: 0;
@@ -280,6 +279,7 @@ body .toggle-button.showing {
   align-self: center;
   cursor: pointer;
   transition: 1s opacity;
+  margin-top: -3.5rem;
 }
 
 .canvas-control {
