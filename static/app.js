@@ -47,8 +47,6 @@ const getSketch = (name, cb) => {
 const requestImageSet = ({elementId}) => {
   const el = document.getElementById(elementId);
 
-  console.log(el.getAttribute('src'))
-
   fetch(el.getAttribute('src')).then(r => r.text()).then((html) => {
     el.innerHTML = html;
     el.classList.add('loaded');
@@ -100,11 +98,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
   if (menus) [...menus].forEach((menu) => {
     const menuTarget = document.getElementById(menu.getAttribute("menu"));
-    console.log(menuTarget)
     const menuActions = menuTarget.querySelectorAll('[show],[hide]');
 
     menu.addEventListener('mouseenter', () => {
-      console.log("mouseenter")
       menuTarget.classList.add('showing');
     })
     menu.addEventListener('mouseleave', () => {
