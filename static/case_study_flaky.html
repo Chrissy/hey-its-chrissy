@@ -1,0 +1,274 @@
+<div class="svg-text">
+  <h2>Why Flaky Tests?</h2>
+  <p class="pline">Flaky tests are tests that return untrustworthy results.</p>
+  <ul>
+    <li>
+      <strong>Engineering teams</strong> rely on thousands of tests to protect
+      their application and their sanity.
+    </li>
+    <li>
+      <strong>Problematic tests</strong> erode engineering velocity by slowing
+      CI times and gating release cycles.
+    </li>
+    <li>
+      <strong>Flaky tests</strong> are a major offender, but only one of several
+      problematic test types this product helps with.
+    </li>
+  </ul>
+</div>
+
+<img class="big-image" src="case-studies/TrunkFlakyExtra5.png" />
+
+<div class="svg-text">
+  <h2>Who Will Use This?</h2>
+  <ul>
+    <li>
+      <strong>DevEx owners</strong> will use it to understand what happened to a
+      test, assess the priority, and delegate the test to the team that owns it.
+    </li>
+    <li>
+      <strong>Non-owner ICs</strong> will log in and use flaky tests to unblock
+      PRs or investigate problematic tests owned by their team.
+    </li>
+  </ul>
+</div>
+
+<img class="big-image" src="case-studies/TrunkFlakyExtra4.png" />
+
+<div class="svg-text">
+  <h2>Previous Product</h2>
+  <p>
+    <strong>The previous iteration</strong> of the flaky test detail page was
+    built first by a freelancer and later taken over by me. Before this project,
+    I did a lot of spot work on various component flows, but this was our first
+    major pass at the page.
+  </p>
+</div>
+
+<img class="big-image pretty" src="case-studies/FlakyTP5.png" />
+
+<div class="svg-text">
+  <h2>User Story & Initiatives</h2>
+  <ul>
+    <li>
+      <strong>Understanding test history</strong> is important. The run node
+      display limited the window of time that could be shown and was difficult
+      to parse.
+    </li>
+    <li>
+      <strong>Test history is tied to environment.</strong> Because all run data
+      was mushed together, users were struggling to understand test
+      classification.
+    </li>
+    <li>
+      <strong>On a high level,</strong> we wanted to show when something
+      happened to a test, where it happened, and how to act.
+    </li>
+  </ul>
+</div>
+
+<img class="big-image" src="case-studies/TrunkFlakyExtra2.png" />
+
+<div class="svg-text">
+  <h2>Preliminary User Interviews</h2>
+  <ul>
+    <li>
+      <strong>Users want to see code quickly.</strong> Log output is where
+      rubber hits the road.
+    </li>
+
+    <li>
+      <strong>Users can have both passive and active mindsets here.</strong> 
+      DevEx owners use the test page to understand where their biggest problems
+      are and delegate them, but also to put out CI fires.
+    </li>
+    <li>
+      <strong>Where is this failing?</strong> Knowing where a test is failing
+      (PRs, nightlies, etc.) is critical to understanding what is going wrong.
+    </li>
+    <li>
+      DevEx owners heavily weigh the consequences of quarantining. They need
+      buy-in and corroboration to feel confident in that decision.
+    </li>
+  </ul>
+</div>
+
+<img class="big-image" src="case-studies/FlakyTP9.png" />
+<p class="caption">
+  A sample teardown based on interviews with users and stakeholders
+</p>
+
+<img class="big-image" src="case-studies/FlakyTP10.png" />
+<p class="caption">Sample competitive research</p>
+
+<div class="svg-text">
+  <h2>First Round Designs (20%)</h2>
+  <ul>
+    <li>
+      Our pod began with real visualizations and dashboards based on customer
+      feedback and internal ideation.
+    </li>
+    <li>
+      We vetted these prototypes with customers first, then used images to build
+      collage-like 20% designs.
+    </li>
+    <li>
+      Early design ideation happened through daily collaborative pod sessions.
+    </li>
+  </ul>
+</div>
+
+<img class="big-image pretty" src="case-studies/FlakyTP12.png" />
+<p class="caption">UI collages using screenshots and existing components</p>
+
+<img class="big-image pretty" src="case-studies/FlakyTP12.png" />
+<p class="caption">
+  Many of the ideas in these designs came from collaborative pod sessions
+</p>
+
+<img class="big-image pretty" src="case-studies/FlakyTP14.png" />
+
+<div class="svg-text">
+  <h2>Second Round Designs (80%)</h2>
+  <ul>
+    <li>
+      After shopping our 20% designs around, including with leadership, we
+      decided to simplify or remove many of the large metrics.
+    </li>
+    <li>
+      The sidebar layout received the most positive feedback, so we decided to
+      explore fixed and fluid layouts around it.
+    </li>
+    <li>
+      We received feedback that the run data and log output felt very busy, so
+      we opted to move run node data into the history sidebar and collapse the
+      log output.
+    </li>
+  </ul>
+</div>
+
+<img class="big-image pretty" src="case-studies/FlakyTP16.png" />
+<p class="caption">Fluid approach</p>
+
+<img class="big-image pretty" src="case-studies/FlakyTP17.png" />
+<p class="caption">
+  Expandable run view as a compromise until log grouping is further along
+</p>
+
+<img class="big-image pretty" src="case-studies/FlakyTP19.png" />
+<p class="caption">Non-fluid variant</p>
+
+<div class="svg-text">
+  <h2>Final Iteration</h2>
+  <ul>
+    <li>
+      I broke out the text for environment area bar to accommodate edge concerns
+      and help with confusion about the type of data it shows.
+    </li>
+    <li>
+      I added filtering to test history and dialed in the datapoints and ability
+      to view run nodes.
+    </li>
+    <li>
+      I switched the timeline area chart to a traditional bar chart to help
+      users understand total run scale for each bucket.
+    </li>
+  </ul>
+</div>
+
+<img class="big-image" src="case-studies/FlakyTP20.png" />
+<p class="caption">
+  We went with the non-fluid variant to stay consistent with other views
+</p>
+
+<img class="big-image" src="case-studies/FlakyTP21.png" />
+<p class="caption">Hover interactions</p>
+
+<img class="big-image" src="case-studies/FlakyTP22.png" />
+<p class="caption">
+  As our log grouping got better, we were able to expand the run output directly
+</p>
+
+<img class="big-image" src="case-studies/FlakyTP23.png" />
+<p class="caption">Full run list can still be accessed via history items</p>
+
+<img class="big-image" src="case-studies/FlakyTP24.png" />
+<p class="caption">Loading states</p>
+
+<img class="big-image" src="case-studies/FlakyTP25.png" />
+<p class="caption">Empty states</p>
+
+<div class="svg-text">
+  <h2>Post Release Interviews (Ongoing)</h2>
+  <ul>
+    <li>
+      Users loved the prominence of the sidebar—a feature some had never seen
+      before even though it was always there.
+    </li>
+    <li>
+      Users enjoyed the branch class breakdowns, but some were confused by the
+      labeling.
+    </li>
+    <li>
+      Users only missed the node breakdowns when trying to understand status
+      changes over time—a problem resolved by the addition of run details in the
+      timeline.
+    </li>
+    <li>
+      Many big metric cards were not missed, except for PRs impacted and CI
+      hourly metrics, which are helpful for justifying the test problem upward
+      internally.
+    </li>
+  </ul>
+</div>
+
+<img class="big-image" src="case-studies/TrunkFlakyExtra3.png" />
+
+<div class="svg-text">
+  <h2>Component Work</h2>
+  <p>
+    As development progressed, the component sets were fleshed out and global
+    design entries were created or expanded.
+  </p>
+</div>
+
+<img class="big-image" src="case-studies/FlakyTP28.png" />
+<p class="caption">
+  We reworked the bar chart component. The bottom one was used in another view.
+</p>
+
+<img class="big-image" src="case-studies/FlakyTP29.png" />
+<p class="caption">Expansion of the run status icon states</p>
+
+<img class="big-image" src="case-studies/FlakyTP31.png" />
+
+<div class="svg-text">
+  <h2>Follow Up Work</h2>
+  <ul>
+    <li>
+      I continued to support engineers with improvements and guidance for
+      loading states on the component level.
+    </li>
+    <li>
+      As our team learned more about environment edge cases, we added variants
+      for differing environment counts to the environment graph.
+    </li>
+    <li>
+      I improved visualization colors to factor in perception biases and color
+      blindness.
+    </li>
+    <li>
+      I made improvements to code owners, ticketing, and various empty states
+      based on user feedback (in-progress).
+    </li>
+  </ul>
+</div>
+
+<img class="big-image" src="case-studies/FlakyTP33.png" />
+<p class="caption">Loading states were expanded as a follow up</p>
+
+<img class="big-image" src="case-studies/FlakyTP34.png" />
+<p class="caption">States for different branch class counts</p>
+
+<img class="big-image" src="case-studies/FlakyTP35.png" />
+<p class="caption">History item states</p>

@@ -46,6 +46,9 @@ const getSketch = (name, cb) => {
 
 const requestImageSet = ({elementId}) => {
   const el = document.getElementById(elementId);
+
+  console.log(el.getAttribute('src'))
+
   fetch(el.getAttribute('src')).then(r => r.text()).then((html) => {
     el.innerHTML = html;
     el.classList.add('loaded');
@@ -61,7 +64,7 @@ const handleToggleButtonClick = (toggleButton) => {
   document.body.classList.add('animating');
 
   const transitionEnd = () => {
-    if (toggleButton.getAttribute("shouldLoadImages")) requestImageSet({elementId: "image-set-1"});
+    if (toggleButton.getAttribute("shouldLoadImages")) requestImageSet({elementId: toggleButton.getAttribute("firstSet")});
     document.body.classList.remove('animating');
     document.body.removeEventListener("transitionend", transitionEnd);
   }
