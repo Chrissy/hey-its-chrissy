@@ -46,6 +46,7 @@ const getSketch = (name, cb) => {
 
 const requestImageSet = ({elementId}) => {
   const el = document.getElementById(elementId);
+
   fetch(el.getAttribute('src')).then(r => r.text()).then((html) => {
     el.innerHTML = html;
     el.classList.add('loaded');
@@ -61,7 +62,7 @@ const handleToggleButtonClick = (toggleButton) => {
   document.body.classList.add('animating');
 
   const transitionEnd = () => {
-    if (toggleButton.getAttribute("shouldLoadImages")) requestImageSet({elementId: "image-set-1"});
+    if (toggleButton.getAttribute("shouldLoadImages")) requestImageSet({elementId: toggleButton.getAttribute("firstSet")});
     document.body.classList.remove('animating');
     document.body.removeEventListener("transitionend", transitionEnd);
   }
@@ -76,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const canvas = document.getElementById("canvas");
   const control = document.getElementById("canvas-control")
   const toggleButtons = document.querySelectorAll('[show],[hide]');
+  const menus = document.querySelectorAll('[menu]');
   const sketchTitle = document.getElementById('sketch-title');
 
   let sketchStore = [getSketch(guide[0].name)];
@@ -92,6 +94,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
   if (toggleButtons) [...toggleButtons].forEach((toggleButton) => {
     toggleButton.addEventListener('click', () => handleToggleButtonClick(toggleButton));
+  });
+
+  if (menus) [...menus].forEach((menu) => {
+    const menuTarget = document.getElementById(menu.getAttribute("menu"));
+    const menuActions = menuTarget.querySelectorAll('[show],[hide]');
+
+    menu.addEventListener('mouseenter', () => {
+      menuTarget.classList.add('showing');
+    })
+    menu.addEventListener('mouseleave', () => {
+      menuTarget.classList.remove('showing');
+    })
+    menu.addEventListener('click', () => {
+      menuTarget.classList.remove('showing');
+    })
   });
 
   const mesh = initializeMesh(canvas);

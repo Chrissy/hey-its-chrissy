@@ -1,0 +1,225 @@
+<div class="svg-text">
+  <h2>What Is A Merge Queue?</h2>
+  <p class="pline">
+    A merge queue is a tool that automates PR merges into your repo's main
+    branch.
+  </p>
+  <p class="pline">Specifically, it resolves two common problems:</p>
+  <ul>
+    <li>
+      <strong>A PR is branched off an old commit of main.</strong>
+    </li>
+    <li>
+      <strong>Two PRs work independently but not together.</strong>
+    </li>
+  </ul>
+</div>
+
+<img
+  class="big-image"
+  src="case-studies/TrunkMergeExtra2.png"
+  alt="Problem analysis 1"
+/>
+
+<div class="svg-text">
+  <h2>Who Will Use This?</h2>
+  <ul class="pline">
+    <li>
+      <strong>DevEx Owners</strong> will set up and monitor their team's queue.
+    </li>
+    <li>
+      <strong>ICs</strong> will log in and use merge to check in on their PRs.
+      They will want to learn and take action if their PR is stuck.
+    </li>
+  </ul>
+</div>
+
+<div class="text-content">
+  <h2>Competitive Research & Planning</h2>
+  <p>
+    I always begin with thorough competitive research. It usually isn't worth it
+    to reinvent the wheel. Part of competitive research is asking the right
+    questions:
+  </p>
+  <ul>
+    <li>
+      <strong>What can I find that will help us move quickly?</strong>
+    </li>
+    <li>
+      <strong>What do stakeholders have in mind? What are we competing with?</strong>
+    </li>
+    <li>
+      <strong>What are our users looking at? What are their expectations based on?</strong>
+    </li>
+  </ul>
+</div>
+
+<img class="big-image" src="case-studies/MergeResearchTogether.png" />
+
+<img class="big-image" src="case-studies/TrunkMerge8.png" />
+<p class="caption">I did not make this lovely diagram, but we used it a lot</p>
+
+<img class="big-image" src="case-studies/TrunkMerge10.png" />
+<p class="caption">Sketches I did to work through many ideas quickly</p>
+
+<div class="svg-text">
+  <h2>20% Designs</h2>
+  <ul>
+    <li>
+      The goal of 20% designs is to generate strong opinions without investing a
+      lot of time.
+    </li>
+    <li>
+      These designs are usually shared very frequently and only with project
+      stakeholders.
+    </li>
+  </ul>
+</div>
+
+<img class="big-image pretty" src="case-studies/TrunkMerge12.png" />
+<p class="caption">
+  Looking back, many of these views were almost comically simple
+</p>
+
+<img class="big-image pretty" src="case-studies/TrunkMerge13.png" />
+<p class="caption">What more could you want?!</p>
+
+<img class="big-image pretty" src="case-studies/TrunkMerge14.png" />
+<p class="caption">After several collaborative sessions, we got here</p>
+
+<img class="big-image pretty" src="case-studies/TrunkMerge15.png" />
+<p class="caption">An example with timeline expanded</p>
+
+<div class="svg-text">
+  <h2>20% Feedback</h2>
+  <ul>
+    <li>We started scoping in two other views: errors and metrics.</li>
+    <li>We worked through timeline direction and how to show more items.</li>
+    <li>We decided on a sidebar for pull request history.</li>
+    <li>
+      We collaborated on what kind of data we wanted to show in the default
+      sidebar.
+    </li>
+  </ul>
+</div>
+
+<img class="big-image pretty" src="case-studies/TrunkMerge18.png" />
+<p class="caption">We hashed out details on viable data visualizations</p>
+
+<img class="big-image pretty" src="case-studies/TrunkMerge19.png" />
+<p class="caption">We went with a sidebar view for PR history</p>
+
+<div class="svg-text">
+  <h2>Development Begins!</h2>
+  <p class="pline">
+    As Engineering built and learned from design partners, these problems arose:
+  </p>
+  <ul>
+    <li>Users wanted to see a more robust timeline history.</li>
+    <li>Users wanted to move things up and down in the queue.</li>
+    <li>A basic alert system was needed for trials, errors, etc.</li>
+    <li>
+      We had unclear visual storytelling as items merged in or moved around.
+    </li>
+  </ul>
+</div>
+
+<img class="big-image" src="case-studies/TrunkMerge21.png" />
+<p class="caption">
+  A diagram I made to help understand the expanding workflows and states
+</p>
+
+<video class="big-image pretty" width="800" autoplay loop>
+  <source src="case-studies/merge-queue-animations.mp4" type="video/mp4" />
+</video>
+<p class="caption">
+  Prototype I made to help demonstrate how to animate state transitions
+</p>
+
+<img class="big-image pretty" src="case-studies/TrunkMerge22.png" />
+<p class="caption">Additional interactions and states</p>
+
+<img class="big-image pretty" src="case-studies/TrunkMerge24.png" />
+<p class="caption">Complex history</p>
+
+<img class="big-image pretty" src="case-studies/TrunkMerge25.png" />
+<p class="caption">Early onboarding</p>
+
+<img class="big-image pretty" src="case-studies/TrunkMerge26.png" />
+<p class="caption">Empty state before anything is queued</p>
+
+<img class="big-image pretty" src="case-studies/TrunkMerge28.png" />
+<p class="caption">Failures view</p>
+
+<img class="big-image pretty" src="case-studies/TrunkMerge27.png" />
+
+<img class="big-image pretty" src="case-studies/TrunkMerge29.png" />
+<p class="caption">Metrics view</p>
+
+<div class="svg-text">
+  <h2>Ongoing Support</h2>
+  <p class="pline">
+    A product is never truly handed off. Since its launch, here are a few
+    initiatives we've worked on:
+  </p>
+  <ul>
+    <li>
+      We added actions to remove queue items, promote items, and download
+      impacted targets.
+    </li>
+    <li>We added a first-of-kind parallel merging concept.</li>
+    <li>We added a light mode across the product.</li>
+    <li>
+      We removed the visualizations in sidebar, as they weren't adding a lot of
+      value.
+    </li>
+    <li>
+      We auto-expanded history items because users often cared about them first.
+    </li>
+  </ul>
+</div>
+
+<img class="big-image pretty" src="case-studies/TrunkMerge31.png" />
+<p class="caption">RIP sidebar</p>
+<img class="big-image pretty" src="case-studies/TrunkMerge32.png" />
+<p class="caption">Cleaner sidebar with easy access to run logs</p>
+<img class="big-image pretty" src="case-studies/TrunkMerge33.png" />
+<p class="caption">Synchronous merging graph</p>
+<img class="big-image" src="case-studies/TrunkMerge34.png" />
+<p class="caption">Expanded component library</p>
+
+<img class="big-image" src="case-studies/TrunkMergeExtra4.png" />
+
+
+<div class="svg-text">
+  <h2>Initiative: Self-Serve and Onboarding</h2>
+  <p class="pline">
+    After launching the product, we discovered some gaps in the user journey,
+    namely:
+  </p>
+  <ul>
+    <li>Many users created queues on "unqualified" repos.</li>
+    <li>Even for qualified repos, true conversion was poor.</li>
+  </ul>
+</div>
+
+<img class="big-image" src="case-studies/TrunkMerge37.png" />
+<p class="caption">A diagram we collaborated on to understand onboarding</p>
+
+<div class="svg-text">
+  <h2>Onboarding Broadly</h2>
+  <p class="pline">
+    To help users onboard to Merge and funnel users to the product they signed
+    up for, we implemented a new onboarding flow.
+  </p>
+</div>
+
+<img class="big-image pretty" src="case-studies/TrunkMerge37-1.png" />
+<p class="caption">Product selection</p>
+
+<img class="big-image pretty" src="case-studies/TrunkMerge38.png" />
+<p class="caption">Adding a repo</p>
+
+<img class="big-image pretty" src="case-studies/TrunkMerge39.png" />
+<img class="big-image pretty" src="case-studies/TrunkMerge40.png" />
+<p class="caption">Create confidence by showing recent PRs</p>

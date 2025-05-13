@@ -2,12 +2,12 @@
   "name": "chrissy-makes-a-website",
   "version": "1000.0.0",
   "engines": {
-    "node": "20.5.1"
+    "node": "20.9.0"
   },
   "scripts": {
     "start": "node server.js",
     "dev": "webpack --watch & node server.js",
-    "heroku-postbuild": "./node_modules/.bin/webpack --config webpack.config.js -p && node builders/upload-bundle.js",
+    "heroku-postbuild": "npx webpack build --config webpack.config.js",
     "minify": "node builders/minify-images.mjs",
     "sketches": "node builders/terrain-sketches.js"
   },
@@ -16,6 +16,7 @@
     "array-shuffle": "^1.0.1",
     "aws-sdk": "^2.113.0",
     "express": "^4.19.0",
+    "tesseract.js": "^6.0.1",
     "three": "^0.87.1",
     "webpack": "^5.91.0"
   },
